@@ -5,8 +5,14 @@
     background-color: rgb(210, 211, 211);
 
     display: grid;
-    grid-template-columns: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
-    grid-template-rows: minmax(4rem, auto) auto;
+
+    grid-template-areas: "header header header" "bigcontent smallcontent smallcontent" "footer footer footer";
+
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: repeat(3,minmax(100px, auto));
+    
+
+    gap: 1rem;
 
     *{
         margin: 0;
@@ -15,5 +21,20 @@
         outline-style: solid;
         outline-color: white;
         
+    }
+
+    .test {
+        grid-row: bigcontent;
+        grid-column: bigcontent;
+    }
+
+    .header {
+        grid-row: header;
+        grid-column: header;
+    }
+
+    .footer {
+        grid-row: footer;
+        grid-column: footer;
     }
 }
