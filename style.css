@@ -1,0 +1,19 @@
+@import url("reset.css");
+
+
+.grid-container {
+    background-color: rgb(210, 211, 211);
+
+    display: grid;
+    grid-template-columns: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+    grid-template-rows: minmax(4rem, auto) auto;
+
+    *{
+        margin: 0;
+        background-color: rgb(255, 108, 108);
+        text-align: center;
+        outline-style: solid;
+        outline-color: white;
+        
+    }
+}
